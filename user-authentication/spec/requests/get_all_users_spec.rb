@@ -6,7 +6,7 @@ end
 
 RSpec.describe "Users", type: :request do
     describe 'GET /users' 
-    let(:user) { FactoryBot.create(:user) }
+    let(:user) { FactoryBot.create(:user, password: "password123") }
     let(:token) { jwt_encode(user_id: user.id) }
     before do
         post '/login', params: { email: user.email, password: "password123" }
