@@ -7,21 +7,14 @@ end
 RSpec.describe "Users", type: :request do
   describe "post /register" do
     context 'with valid parameters' do
-      let(:user) {FactoryBot.create(:user)}
+      let!(:user) {FactoryBot.build(:user)}
       before do
         post '/register', params: {
-          user: {
             username: user.username,
             email: user.email,
             password: user.password
-          }
         }
       end
-      it 'prints the response body' do
-        puts response.body
-        expect(true).to eq(true) 
-      end
-
       it 'returns the username' do
         expect(json['username']).to eq(user.username)  
       end
