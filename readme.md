@@ -1,6 +1,6 @@
 
 # ROR-Learning
-This repository contains all the project/tasks I performed while learning ruby and rails
+This repository contains the projects/tasks, I performed while learning ruby and rails
 
 
 
@@ -90,4 +90,20 @@ Contents:-
 
 •  Input Validation: Validate input data to prevent injection attacks (such as SQL injection).
 
+• Unit Tests: Write unit tests for the whole project
+
+## Security Features (/security-features)
+
+Project: Implement security measures in a file-sharing API.
+
+Contents:
+
+• Secure File Upload: Create an endpoint POST /upload with secure file upload capabilities. Implement checks to prevent unauthorised access.
+
+
+• Input Validation: Validate input data to prevent injection attacks (such as SQL injection).
+
+
+• Encryption: Implement encryption for sensitive data storage and transmission, such as passwords or files being uploaded.
+   
 • Unit Tests: Write unit tests for the whole project
