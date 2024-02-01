@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
     skip_before_action :authenticate_request, only: [:create]
-    before_action :set_user, only: [:show, :destroy]
+    before_action :set_user, only: [:show]
 
     def index 
         @user = User.all 
@@ -20,15 +20,6 @@ class UsersController < ApplicationController
         end
     end
 
-    def update 
-        unless @user.update(user_params)
-            render json: {errors: @user.errors.full_messages}, status: :unprocessable_entity
-        end
-    end
-
-    def destroy
-        @user.destroy
-    end
 
     private
         def user_params
