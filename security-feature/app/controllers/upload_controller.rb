@@ -1,8 +1,13 @@
 class UploadController < ApplicationController
     def create
-        @user = User.find(@current_user.id)
+        @user = @current_user
         @upload = @user.uploads.create(upload_params)
         render json: @user.uploads ,status: :created
+    end
+    def show 
+        @user = @current_user
+        @uploads = @user.uploads 
+        render json: @uploads, status: :ok 
     end
 
     private 
